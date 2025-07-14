@@ -1,0 +1,31 @@
+# Smart LLM Router Configuration
+# This file controls which models are used for different types of requests
+
+# Model Routing Configuration
+# These are logical model names that must match entries in models.json
+routing:
+  classifier_model: classifier
+  simple_no_research_model: 4.1-nano           # Route simple requests to capable model
+  simple_research_model: 4o-mini                # Route simple research to capable model  
+  hard_no_research_model: Flash-No-Research    # Heavy context processing
+  hard_research_model: Flash-Research          # Complex research tasks
+  escalation_model: Gemini-Pro                  # User-requested escalation
+  fallback_model: Flash-No-Research                 # Fallback when other models fail
+
+# Context Detection Settings
+context_detection:
+  token_usage_threshold: 4000                 # Token count in total messages to trigger heavy context routing
+  enable_file_analysis_detection: true        # Detect file analysis requests in user messages
+
+# Conversation State Management
+conversation_state:
+  max_conversations: 1000                      # Maximum conversations to track in memory
+  cleanup_after_hours: 24                     # Remove conversation states after N hours
+  vision_sticky_messages: 3                   # Stay on vision model for N messages after vision detected
+  heavy_context_sticky_messages: 2            # Stay on heavy model for N messages after heavy context
+  topic_change_keyword_threshold: 0.3         # Keyword overlap ratio below which topic change is detected
+  
+# Logging Configuration  
+logging:
+  level: DEBUG                              # DEBUG, INFO, WARNING, ERROR
+  enable_detailed_routing_logs: true          # Log detailed routing decisions

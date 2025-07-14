@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+openai
+ollama
+google-genai>=1.0.0
+anthropic
+python-dotenv
+httpx
+pydantic
+pyyaml
+tiktoken
