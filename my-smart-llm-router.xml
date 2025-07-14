@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>smart-llm-router</Name>
-  <Repository>your-github-username/smart-llm-router</Repository>
-  <Registry>https://github.com/your-github-username/smart-llm-router</Registry>
+  <Repository>aidrak/smart-llm-router</Repository>
+  <Registry>https://github.com/aidrak/smart-llm-router</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/your-github-username/smart-llm-router/issues</Support>
-  <Project>https://github.com/your-github-username/smart-llm-router</Project>
+  <Support>https://github.com/aidrak/smart-llm-router/issues</Support>
+  <Project>https://github.com/aidrak/smart-llm-router</Project>
   <Overview>Smart LLM Router - Intelligent routing system for multiple AI providers (OpenAI, Gemini, Anthropic, Perplexity). Automatically selects the best model based on request complexity, research needs, and context. Perfect for OpenWebUI integration.</Overview>
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:8000]/health</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/your-github-username/smart-llm-router/main/unraid-template.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/your-github-username/smart-llm-router/main/icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/aidrak/smart-llm-router/main/unraid-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/aidrak/smart-llm-router/main/icon.png</Icon>
   <ExtraParams>--security-opt no-new-privileges:true --cap-drop=ALL --cap-add=NET_BIND_SERVICE --read-only --tmpfs /tmp:noexec,nosuid,size=100m</ExtraParams>
   <PostArgs/>
   <CPUset/>
